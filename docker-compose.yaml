@@ -1,0 +1,16 @@
+version: "3.5"
+
+services:
+
+  socks4-proxy:
+    build:
+      context: ./dante
+      # args:
+      #   SOCKS_USER: 'socks4user'
+      #   SOCKS_PASS: 'nO1zj0ldGaQXQtVaBZAm'
+    restart: always
+    ports:
+      - "8888:1080"
+    logging:
+      options:
+        max-size: 100m
